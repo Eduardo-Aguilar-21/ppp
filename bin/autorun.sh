@@ -25,9 +25,8 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 echo $PROJECT_DIR
 # Source the necessary scripts using the PROJECT_DIR variable
-source "$PROJECT_DIR/lib/check_and_stop_process.sh"
-source "$PROJECT_DIR/lib/execute_maven_project.sh"
-source "$PROJECT_DIR/lib/execute_react_project.sh"
+source "lib/run_java.sh"
+source "lib/run_node.sh"
 
 # Check if the route.txt file exists
 if [ ! -f "$PROJECT_DIR/routes.txt" ]; then
