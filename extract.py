@@ -14,12 +14,20 @@ for puerto in puertos:
 
     # Usar lsof para encontrar el proceso que escucha en el puerto
     try:
+        # Ejecutar lsof y obtener la salida
         proceso = subprocess.check_output(['sudo', 'lsof', '-i', f':{puerto}']).decode('utf-8')
-        print(proceso)
+        
+        # Dividir la salida en líneas y filtrar por la que contiene 'LISTEN'
+        lineas = proceso.splitlines()
+        linea_listen = [linea for linea in lineas if 'LISTEN' in linea]
 
-        # Extraer el PID del proceso
-        pid = proceso.split()[9]  # Ajustar el índice según el resultado de lsof
-
+        if not linea_listen:
+            print(f"No se encontró ningún proceso escuchando en el puerto {puerto}.")
+            continue
+        
+        # Extraer el PID del proceso de la línea 'LISTEN'
+        pid = linea_listen[0].split()[1]
+        
         # Matar el proceso usando kill -9
         subprocess.run(['sudo', 'kill', '-9', pid])
         print(f"Proceso con PID {pid} terminado.")
