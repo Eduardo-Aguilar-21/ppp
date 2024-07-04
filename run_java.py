@@ -26,7 +26,7 @@ class RunJava:
         
         # Ejecutar el archivo .jar en segundo plano
         try:
-            subprocess.run(['sudo', 'java', '-jar', jar_path], check=True)
+            subprocess.Popen(['sudo', 'java', '-jar', jar_path], check=True)
             print(f"Ejecutando {jar_path} en segundo plano.")
         except subprocess.CalledProcessError as e:
             print(f"Error al ejecutar {jar_path}: {e}")
