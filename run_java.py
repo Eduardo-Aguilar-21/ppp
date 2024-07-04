@@ -1,6 +1,5 @@
-import re
-import subprocess
 import os
+import subprocess
 
 class RunJava:
     def __init__(self, project_directory):
@@ -26,7 +25,7 @@ class RunJava:
         
         # Ejecutar el archivo .jar en segundo plano
         try:
-            subprocess.Popen(['sudo', 'java', '-jar', jar_path], check=True)
+            subprocess.Popen(['sudo', 'java', '-jar', jar_path])
             print(f"Ejecutando {jar_path} en segundo plano.")
         except subprocess.CalledProcessError as e:
             print(f"Error al ejecutar {jar_path}: {e}")

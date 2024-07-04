@@ -1,6 +1,5 @@
-import re
-import subprocess
 import os
+import subprocess
 
 class RunNode:
     def __init__(self, project_directory):
@@ -15,7 +14,7 @@ class RunNode:
         
         # Ejecutar el archivo server.js en segundo plano
         try:
-            subprocess.Popen(['sudo', 'node', server_js_path], check=True)
+            subprocess.Popen(['sudo', 'node', server_js_path])
             print(f"Ejecutando {server_js_path} en segundo plano.")
         except subprocess.CalledProcessError as e:
             print(f"Error al ejecutar {server_js_path}: {e}")
