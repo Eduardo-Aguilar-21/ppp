@@ -1,0 +1,31 @@
+# Monitoreo Temperatura
+"/var/www/monitoreo-temperatura/monitoreo-temperatura-api", 8086, java
+"/var/www/monitoreo-temperatura/monitoreo-temperatura-ff", 3001, react
+
+# Gestión Carga
+"/var/www/gestion-carga/gestion-carga-api", 8087, java
+"/var/www/gestion-carga/gestion-carga-front", 3001, react
+
+# Neumáticos Sensor
+"/var/www/neumaticos-sensor/Neumaticos-API", 8088, java
+"/var/www/neumaticos-sensor/Neumaticos-Front", 3003, react
+
+# Batería Camión 
+"/var/www/bateria-camion/Bateria-Camion-API", 8089, java
+"/var/www/bateria-camion/bateria-camion-front", 3004, react
+
+# Datero
+"/var/www/datero/datero-api", 8090, java
+"/var/www/datero/Datero-Front", 3005, react
+
+# Ruta segura 
+"/var/www/rutasegura/coordenadasRuta-API", 8091, java
+"/var/www/rutasegura/coordenadas-react", 3006, react
+
+
+# Bus Asientos 
+"/var/www/bus-asientos/bus-asientos-front", 3007, react
+
+# Gestión Camiones
+"/var/www/gestion-camiones/GestionCamiones", 8093, java
+
