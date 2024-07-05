@@ -36,7 +36,7 @@ if [ ! -f "$PROJECT_DIR/routes.txt" ]; then
 fi
 
 # Read the paths and ports from the file routes.txt, ignoring lines that start with #
-mapfile -t routes < <(grep -v '^#' $PROJECT_DIR/routes.txt)
+mapfile -t routes < <(grep -v '^#' routes.txt)
 
 echo "************ Automated Project Runner ************"
 

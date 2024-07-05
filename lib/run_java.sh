@@ -28,6 +28,3 @@ run_java() {
     sudo java -jar "$jar_file" &
 }
 
-# Uso de la función run_java
-project_directory="/ruta/al/proyecto"
-run_java "$project_directory"

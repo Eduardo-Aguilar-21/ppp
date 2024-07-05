@@ -17,6 +17,4 @@ run_node() {
     sudo node "$server_js_path" &
 }
 
-# Uso de la función run_node
-project_directory="/ruta/al/proyecto"
-run_node "$project_directory"
+
