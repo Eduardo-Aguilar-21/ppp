@@ -27,12 +27,12 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 echo $PROJECT_DIR
 # Source the necessary scripts using the PROJECT_DIR variable
-source "lib/run_java.sh"
-source "lib/run_node.sh"
+source "$PROJECT_DIR/lib/run_java.sh"
+source "$PROJECT_DIR/lib/run_node.sh"
 
 # Check if the route.txt file exists
-if [ ! -f "routes.txt" ]; then
-    echo "Error: File 'routes.txt' not found."
+if [ ! -f "$PROJECT_DIR/routes.txt" ]; then
+    echo "Error: File '$PROJECT_DIR/routes.txt' not found."
     echo "Add routes.txt file."
     exit 1
 fi
@@ -41,7 +41,7 @@ fi
 python3 terminate_ports.py
 
 # Read the paths and ports from the file routes.txt, ignoring lines that start with #
-mapfile -t routes < <(grep -v '^#' routes.txt)
+mapfile -t routes < <(grep -v '^#' $PROJECT_DIR/routes.txt)
 
 echo "************ Automated Project Runner ************"
 
