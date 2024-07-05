@@ -17,7 +17,7 @@ do
     backup_file="$backup_folder/${database}-${current_date}.sql"
 
     # Crear el backup de la base de datos actual
-    mysqldump -u tu_usuario -pcontraseña --databases "$database" > "$backup_file"
+    mysqldump -u icmdb -pdakar*2024 --databases "$database" > "$backup_file"
 
     # Comprobar si el backup se realizó correctamente
     if [ $? -eq 0 ]; then
