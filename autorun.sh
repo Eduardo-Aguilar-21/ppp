@@ -38,7 +38,7 @@ if [ ! -f "routes.txt" ]; then
 fi
 
 # Ejecutar el script de Python para terminar procesos
-python3 terminator.py
+python3 terminate_ports.py
 
 # Read the paths and ports from the file routes.txt, ignoring lines that start with #
 mapfile -t routes < <(grep -v '^#' routes.txt)
