@@ -42,4 +42,7 @@ class PortTerminator:
                 print(f"No se encontró ningún proceso escuchando en el puerto {puerto}.")
             except IndexError:
                 print(f"No se pudo obtener el PID del proceso escuchando en el puerto {puerto}.")
+                
+            
+PortTerminator('routes.txt')
 
