@@ -26,13 +26,7 @@ run_java() {
     # Ejecutar el archivo .jar en segundo plano
     echo "Ejecutando $jar_file en segundo plano."
     sudo java -jar "$jar_file" &
-    
-    # Obtener el PID del proceso JAR
-    JAR_PID=$!
-    
-    echo JAR_PID
-    # Esperar a que el proceso JAR termine
-    # wait $JAR_PID
+    sleep 20
     
     # Continuar con el resto del script
     echo "El archivo JAR ha terminado de ejecutarse. Continuando con el script..."
