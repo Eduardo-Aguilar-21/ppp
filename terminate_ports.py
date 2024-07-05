@@ -44,5 +44,12 @@ class PortTerminator:
                 print(f"No se pudo obtener el PID del proceso escuchando en el puerto {puerto}.")
                 
             
-PortTerminator('routes.txt')
+# Crear una instancia de PortTerminator
+terminator = PortTerminator('routes.txt')
+
+# Leer los puertos del archivo
+terminator.read_ports()
+
+# Terminar los procesos en los puertos leídos
+terminator.terminate_processes()
 
