@@ -38,7 +38,7 @@ if [ ! -f "$PROJECT_DIR/routes.txt" ]; then
 fi
 
 # Ejecutar el script de Python para terminar procesos
-python3 /etc/automation/ppp/bin/terminate_ports.py
+python3 /etc/automation/ppp/terminate_ports.py
 
 # Read the paths and ports from the file routes.txt, ignoring lines that start with #
 mapfile -t routes < <(grep -v '^#' $PROJECT_DIR/routes.txt)
