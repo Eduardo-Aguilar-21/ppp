@@ -28,10 +28,10 @@ run_java() {
     sudo java -jar "$jar_file" &
     
     # Obtener el PID del proceso JAR
-    JAR_PID=$!
+    # JAR_PID=$!
     
     # Esperar a que el proceso JAR termine
-    wait $JAR_PID
+    # wait $JAR_PID
     
     # Continuar con el resto del script
     echo "El archivo JAR ha terminado de ejecutarse. Continuando con el script..."
