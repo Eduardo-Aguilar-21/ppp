@@ -19,6 +19,8 @@
 # Source the .bashrc file to ensure that the PROJECT_DIR variable is loaded
 #source ~/.bashrc
 
+
+
 # Obtiene la ubicación del script autorun.sh y navega a la carpeta Scripts
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -34,6 +36,9 @@ if [ ! -f "routes.txt" ]; then
     echo "Add routes.txt file."
     exit 1
 fi
+
+# Ejecutar el script de Python para terminar procesos
+python3 terminator.py
 
 # Read the paths and ports from the file routes.txt, ignoring lines that start with #
 mapfile -t routes < <(grep -v '^#' routes.txt)
