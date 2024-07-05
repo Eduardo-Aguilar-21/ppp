@@ -1,0 +1,7 @@
+monitoreotemperaturadb
+gestioncargadb
+tiredb
+bateriacamiondb
+daterodb
+rutaseguradb
+gestioncamionesdb
