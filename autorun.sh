@@ -29,8 +29,8 @@ source "lib/run_java.sh"
 source "lib/run_node.sh"
 
 # Check if the route.txt file exists
-if [ ! -f "$PROJECT_DIR/routes.txt" ]; then
-    echo "Error: File '$PROJECT_DIR/routes.txt' not found."
+if [ ! -f "routes.txt" ]; then
+    echo "Error: File 'routes.txt' not found."
     echo "Add routes.txt file."
     exit 1
 fi
