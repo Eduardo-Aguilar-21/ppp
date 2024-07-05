@@ -5,7 +5,7 @@
 # Función para ejecutar server.js en segundo plano
 run_node() {
     project_directory="$1"
-    server_js_path="$project_directory/server.js"
+    server_js_path="server.js"
 
     if [ ! -f "$server_js_path" ]; then
         echo "El archivo $server_js_path no existe."
